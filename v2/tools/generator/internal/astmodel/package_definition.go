@@ -78,7 +78,7 @@ func (p *PackageDefinition) EmitDefinitions(
 		}
 
 		// If emitDocFiles is true from config and is not Storage package, then we generate doc file for the package
-		if !strings.HasSuffix(p.PackageName, StoragePackageSuffix) && emitDocFiles {
+		if !strings.HasSuffix(p.PackageName, StorageSubPackage) && emitDocFiles {
 			if err = emitDocFile(p, outputDir); err != nil {
 				return 0, err
 			}

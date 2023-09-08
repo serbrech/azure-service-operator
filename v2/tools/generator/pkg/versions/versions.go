@@ -29,5 +29,5 @@ func IsPreview(version string) bool {
 
 // IsStorage returns true if the version is a storage version, false otherwise
 func IsStorage(version string) bool {
-	return strings.HasSuffix(version, astmodel.StoragePackageSuffix)
+	return strings.HasSuffix(version, astmodel.StorageSubPackage)
 }
