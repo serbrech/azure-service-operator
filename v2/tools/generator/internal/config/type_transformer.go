@@ -124,33 +124,31 @@ func (target *TransformTarget) appliesToTypeName(tn astmodel.InternalTypeName) b
 		return false
 	}
 
-	grp, ver := tn.InternalPackageReference().GroupVersion()
-
 	if target.Group.IsRestrictive() {
-		if !target.Group.Matches(grp).Matched {
+		if !target.Group.Matches(tn.InternalPackageReference().Group()).Matched {
 			// No match on group
 			return false
 		}
 	}
 
 	if target.Version.IsRestrictive() {
-
-		// Need to handle both full (v1beta20200101) and API (2020-01-01) formats
-		switch ref := tn.PackageReference().(type) {
-		case astmodel.LocalPackageReference:
-			if !ref.HasApiVersion(target.Version.String()) && !target.Version.Matches(ver).Matched {
-				return false
-			}
-		case astmodel.StoragePackageReference:
-			if !ref.Local().HasApiVersion(target.Version.String()) && target.Version.Matches(ver).Matched {
-				return false
-			}
-		default:
-			return false
-		}
+		return target.appliesToPackageReference(tn.PackageReference())
 	}
 
 	return true
+}
+
+func (target *TransformTarget) appliesToPackageReference(ref astmodel.PackageReference) bool {
+	// Need to handle both full (v1beta20200101) and API (2020-01-01) formats
+	switch ref := ref.(type) {
+	case astmodel.LocalPackageReference:
+		return ref.HasApiVersion(target.Version.String()) ||
+			target.Version.Matches(ref.Version()).Matched
+	case astmodel.DerivedPackageReference:
+		return target.appliesToPackageReference(ref.Base())
+	default:
+		return false
+	}
 }
 
 func (target *TransformTarget) appliesToPrimitiveType(pt *astmodel.PrimitiveType) bool {

@@ -63,7 +63,7 @@ func CreateTypesForBackwardCompatibility(
 	// AddSecretsStageID - any transformations made to accommodate secrets must happen before we clone the type
 	//
 	//stage.RequiresPrerequisiteStages(
-	//	ApplyExportFiltersStageID, // export filters won't correctly prune compatibility types, so we create them afterwards
+	//	ApplyExportFiltersStageID, // export filters won't correctly prune compatibility types, so we create them afterward
 	//	AddSecretsStageID,         // secrets need to be configured before we copy the type
 	//)
 
@@ -199,17 +199,26 @@ func createBackwardCompatibilityRenameMap(
 	return result
 }
 
-func createBackwardCompatibilityRename(name astmodel.InternalTypeName, versionPrefix string) astmodel.InternalTypeName {
-	var ref astmodel.InternalPackageReference
+func createBackwardCompatibilityRename(
+	name astmodel.InternalTypeName,
+	versionPrefix string,
+) astmodel.InternalTypeName {
+	ref := createBackwardCompatibilityReference(name.InternalPackageReference(), versionPrefix)
 
-	switch r := name.PackageReference().(type) {
+	return name.WithPackageReference(ref)
+}
+
+func createBackwardCompatibilityReference(
+	ref astmodel.InternalPackageReference,
+	versionPrefix string,
+) astmodel.InternalPackageReference {
+	switch r := ref.(type) {
 	case astmodel.LocalPackageReference:
-		ref = r.WithVersionPrefix(versionPrefix)
-	case astmodel.StoragePackageReference:
-		local := r.Local().WithVersionPrefix(versionPrefix)
-		ref = astmodel.MakeStoragePackageReference(local)
+		return r.WithVersionPrefix(versionPrefix)
+	case astmodel.SubPackageReference:
+		b := createBackwardCompatibilityReference(r.Base(), versionPrefix)
+		return astmodel.MakeSubPackageReference(r.PackageName(), b)
 	default:
 		panic(fmt.Sprintf("unexpected package reference type %T", r))
 	}
-	return name.WithPackageReference(ref)
 }

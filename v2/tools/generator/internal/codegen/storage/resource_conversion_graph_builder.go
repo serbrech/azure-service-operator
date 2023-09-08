@@ -151,10 +151,8 @@ func (b *ResourceConversionGraphBuilder) isCompatibilityPackage(ref astmodel.Pac
 		return false
 	case astmodel.LocalPackageReference:
 		return !r.HasVersionPrefix(b.versionPrefix)
-	case astmodel.StoragePackageReference:
-		return b.isCompatibilityPackage(r.Local())
-	case astmodel.SubPackageReference:
-		return b.isCompatibilityPackage(r.Parent())
+	case astmodel.DerivedPackageReference:
+		return b.isCompatibilityPackage(r.Base())
 	default:
 		msg := fmt.Sprintf(
 			"unexpected PackageReference implementation %T",
