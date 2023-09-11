@@ -5,7 +5,7 @@ package v1api20200801preview
 
 import (
 	"fmt"
-	v20200801ps "github.com/Azure/azure-service-operator/v2/api/authorization/v1api20200801previewstorage"
+	v20200801ps "github.com/Azure/azure-service-operator/v2/api/authorization/v1api20200801preview/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime/conditions"
@@ -51,7 +51,7 @@ var _ conversion.Convertible = &RoleAssignment{}
 func (assignment *RoleAssignment) ConvertFrom(hub conversion.Hub) error {
 	source, ok := hub.(*v20200801ps.RoleAssignment)
 	if !ok {
-		return fmt.Errorf("expected authorization/v1api20200801previewstorage/RoleAssignment but received %T instead", hub)
+		return fmt.Errorf("expected authorization/v1api20200801preview/storage/RoleAssignment but received %T instead", hub)
 	}
 
 	return assignment.AssignProperties_From_RoleAssignment(source)
@@ -61,7 +61,7 @@ func (assignment *RoleAssignment) ConvertFrom(hub conversion.Hub) error {
 func (assignment *RoleAssignment) ConvertTo(hub conversion.Hub) error {
 	destination, ok := hub.(*v20200801ps.RoleAssignment)
 	if !ok {
-		return fmt.Errorf("expected authorization/v1api20200801previewstorage/RoleAssignment but received %T instead", hub)
+		return fmt.Errorf("expected authorization/v1api20200801preview/storage/RoleAssignment but received %T instead", hub)
 	}
 
 	return assignment.AssignProperties_To_RoleAssignment(destination)
