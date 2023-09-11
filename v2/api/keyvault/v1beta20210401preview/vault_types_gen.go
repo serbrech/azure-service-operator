@@ -5,7 +5,7 @@ package v1beta20210401preview
 
 import (
 	"fmt"
-	v1beta20210401ps "github.com/Azure/azure-service-operator/v2/api/keyvault/v1beta20210401previewstorage"
+	v1beta20210401ps "github.com/Azure/azure-service-operator/v2/api/keyvault/v1beta20210401preview/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime/conditions"
