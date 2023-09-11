@@ -5,8 +5,8 @@ package v1beta20181130
 
 import (
 	"encoding/json"
-	v20181130s "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1api20181130storage"
-	v1beta20181130s "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1beta20181130storage"
+	v20181130s "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1api20181130/storage"
+	v1beta20181130s "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1beta20181130/storage"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/kr/pretty"
@@ -73,7 +73,7 @@ func Test_UserAssignedIdentity_WhenPropertiesConverted_RoundTripsWithoutLoss(t *
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForUserAssignedIdentity tests if a specific instance of UserAssignedIdentity can be assigned to v1beta20181130storage and back losslessly
+// RunPropertyAssignmentTestForUserAssignedIdentity tests if a specific instance of UserAssignedIdentity can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForUserAssignedIdentity(subject UserAssignedIdentity) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -177,7 +177,7 @@ func Test_UserAssignedIdentity_Spec_WhenPropertiesConverted_RoundTripsWithoutLos
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForUserAssignedIdentity_Spec tests if a specific instance of UserAssignedIdentity_Spec can be assigned to v1beta20181130storage and back losslessly
+// RunPropertyAssignmentTestForUserAssignedIdentity_Spec tests if a specific instance of UserAssignedIdentity_Spec can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForUserAssignedIdentity_Spec(subject UserAssignedIdentity_Spec) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -296,7 +296,7 @@ func Test_UserAssignedIdentity_STATUS_WhenPropertiesConverted_RoundTripsWithoutL
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForUserAssignedIdentity_STATUS tests if a specific instance of UserAssignedIdentity_STATUS can be assigned to v1beta20181130storage and back losslessly
+// RunPropertyAssignmentTestForUserAssignedIdentity_STATUS tests if a specific instance of UserAssignedIdentity_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForUserAssignedIdentity_STATUS(subject UserAssignedIdentity_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -406,7 +406,7 @@ func Test_UserAssignedIdentityOperatorSpec_WhenPropertiesConverted_RoundTripsWit
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForUserAssignedIdentityOperatorSpec tests if a specific instance of UserAssignedIdentityOperatorSpec can be assigned to v1beta20181130storage and back losslessly
+// RunPropertyAssignmentTestForUserAssignedIdentityOperatorSpec tests if a specific instance of UserAssignedIdentityOperatorSpec can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForUserAssignedIdentityOperatorSpec(subject UserAssignedIdentityOperatorSpec) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -509,7 +509,7 @@ func Test_UserAssignedIdentityOperatorConfigMaps_WhenPropertiesConverted_RoundTr
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForUserAssignedIdentityOperatorConfigMaps tests if a specific instance of UserAssignedIdentityOperatorConfigMaps can be assigned to v1beta20181130storage and back losslessly
+// RunPropertyAssignmentTestForUserAssignedIdentityOperatorConfigMaps tests if a specific instance of UserAssignedIdentityOperatorConfigMaps can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForUserAssignedIdentityOperatorConfigMaps(subject UserAssignedIdentityOperatorConfigMaps) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()

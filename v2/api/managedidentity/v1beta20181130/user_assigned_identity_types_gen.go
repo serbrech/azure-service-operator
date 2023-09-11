@@ -6,7 +6,7 @@ package v1beta20181130
 import (
 	"context"
 	"fmt"
-	v1beta20181130s "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1beta20181130storage"
+	v1beta20181130s "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1beta20181130/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/genericarmclient"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"

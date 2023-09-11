@@ -5,7 +5,7 @@ package v1beta20220131preview
 
 import (
 	"fmt"
-	v1beta20220131ps "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1beta20220131previewstorage"
+	v1beta20220131ps "github.com/Azure/azure-service-operator/v2/api/managedidentity/v1beta20220131preview/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime/conditions"
