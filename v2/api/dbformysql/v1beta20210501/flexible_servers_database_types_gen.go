@@ -5,7 +5,7 @@ package v1beta20210501
 
 import (
 	"fmt"
-	v1beta20210501s "github.com/Azure/azure-service-operator/v2/api/dbformysql/v1beta20210501storage"
+	v1beta20210501s "github.com/Azure/azure-service-operator/v2/api/dbformysql/v1beta20210501/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime/conditions"

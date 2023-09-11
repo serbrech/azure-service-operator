@@ -5,8 +5,8 @@ package v1beta20210501
 
 import (
 	"encoding/json"
-	v20210501s "github.com/Azure/azure-service-operator/v2/api/dbformysql/v1api20210501storage"
-	v1beta20210501s "github.com/Azure/azure-service-operator/v2/api/dbformysql/v1beta20210501storage"
+	v20210501s "github.com/Azure/azure-service-operator/v2/api/dbformysql/v1api20210501/storage"
+	v1beta20210501s "github.com/Azure/azure-service-operator/v2/api/dbformysql/v1beta20210501/storage"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/kr/pretty"
@@ -73,7 +73,7 @@ func Test_FlexibleServersFirewallRule_WhenPropertiesConverted_RoundTripsWithoutL
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForFlexibleServersFirewallRule tests if a specific instance of FlexibleServersFirewallRule can be assigned to v1beta20210501storage and back losslessly
+// RunPropertyAssignmentTestForFlexibleServersFirewallRule tests if a specific instance of FlexibleServersFirewallRule can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForFlexibleServersFirewallRule(subject FlexibleServersFirewallRule) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -177,7 +177,7 @@ func Test_FlexibleServers_FirewallRule_Spec_WhenPropertiesConverted_RoundTripsWi
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForFlexibleServers_FirewallRule_Spec tests if a specific instance of FlexibleServers_FirewallRule_Spec can be assigned to v1beta20210501storage and back losslessly
+// RunPropertyAssignmentTestForFlexibleServers_FirewallRule_Spec tests if a specific instance of FlexibleServers_FirewallRule_Spec can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForFlexibleServers_FirewallRule_Spec(subject FlexibleServers_FirewallRule_Spec) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -282,7 +282,7 @@ func Test_FlexibleServers_FirewallRule_STATUS_WhenPropertiesConverted_RoundTrips
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForFlexibleServers_FirewallRule_STATUS tests if a specific instance of FlexibleServers_FirewallRule_STATUS can be assigned to v1beta20210501storage and back losslessly
+// RunPropertyAssignmentTestForFlexibleServers_FirewallRule_STATUS tests if a specific instance of FlexibleServers_FirewallRule_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForFlexibleServers_FirewallRule_STATUS(subject FlexibleServers_FirewallRule_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
