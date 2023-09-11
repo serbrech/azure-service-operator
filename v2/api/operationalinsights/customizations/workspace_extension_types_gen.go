@@ -5,9 +5,9 @@ package customizations
 
 import (
 	v20210601 "github.com/Azure/azure-service-operator/v2/api/operationalinsights/v1api20210601"
-	v20210601s "github.com/Azure/azure-service-operator/v2/api/operationalinsights/v1api20210601storage"
+	v20210601s "github.com/Azure/azure-service-operator/v2/api/operationalinsights/v1api20210601/storage"
 	v1beta20210601 "github.com/Azure/azure-service-operator/v2/api/operationalinsights/v1beta20210601"
-	v1beta20210601s "github.com/Azure/azure-service-operator/v2/api/operationalinsights/v1beta20210601storage"
+	v1beta20210601s "github.com/Azure/azure-service-operator/v2/api/operationalinsights/v1beta20210601/storage"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"
 )
 
@@ -17,8 +17,8 @@ type WorkspaceExtension struct {
 // GetExtendedResources Returns the KubernetesResource slice for Resource versions
 func (extension *WorkspaceExtension) GetExtendedResources() []genruntime.KubernetesResource {
 	return []genruntime.KubernetesResource{
-		&v20210601.Workspace{},
-		&v20210601s.Workspace{},
 		&v1beta20210601.Workspace{},
-		&v1beta20210601s.Workspace{}}
+		&v1beta20210601s.Workspace{},
+		&v20210601.Workspace{},
+		&v20210601s.Workspace{}}
 }
