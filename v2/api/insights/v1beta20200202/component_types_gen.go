@@ -6,7 +6,7 @@ package v1beta20200202
 import (
 	"context"
 	"fmt"
-	v1beta20200202s "github.com/Azure/azure-service-operator/v2/api/insights/v1beta20200202storage"
+	v1beta20200202s "github.com/Azure/azure-service-operator/v2/api/insights/v1beta20200202/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/genericarmclient"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"

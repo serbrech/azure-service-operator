@@ -5,8 +5,8 @@ package v1beta20180501preview
 
 import (
 	"encoding/json"
-	v20180501ps "github.com/Azure/azure-service-operator/v2/api/insights/v1api20180501previewstorage"
-	v1beta20180501ps "github.com/Azure/azure-service-operator/v2/api/insights/v1beta20180501previewstorage"
+	v20180501ps "github.com/Azure/azure-service-operator/v2/api/insights/v1api20180501preview/storage"
+	v1beta20180501ps "github.com/Azure/azure-service-operator/v2/api/insights/v1beta20180501preview/storage"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/kr/pretty"
@@ -73,7 +73,7 @@ func Test_Webtest_WhenPropertiesConverted_RoundTripsWithoutLoss(t *testing.T) {
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebtest tests if a specific instance of Webtest can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebtest tests if a specific instance of Webtest can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebtest(subject Webtest) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -176,7 +176,7 @@ func Test_Webtest_Spec_WhenPropertiesConverted_RoundTripsWithoutLoss(t *testing.
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebtest_Spec tests if a specific instance of Webtest_Spec can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebtest_Spec tests if a specific instance of Webtest_Spec can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebtest_Spec(subject Webtest_Spec) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -309,7 +309,7 @@ func Test_Webtest_STATUS_WhenPropertiesConverted_RoundTripsWithoutLoss(t *testin
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebtest_STATUS tests if a specific instance of Webtest_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebtest_STATUS tests if a specific instance of Webtest_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebtest_STATUS(subject Webtest_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -445,7 +445,7 @@ func Test_WebTestGeolocation_WhenPropertiesConverted_RoundTripsWithoutLoss(t *te
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestGeolocation tests if a specific instance of WebTestGeolocation can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestGeolocation tests if a specific instance of WebTestGeolocation can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestGeolocation(subject WebTestGeolocation) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -547,7 +547,7 @@ func Test_WebTestGeolocation_STATUS_WhenPropertiesConverted_RoundTripsWithoutLos
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestGeolocation_STATUS tests if a specific instance of WebTestGeolocation_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestGeolocation_STATUS tests if a specific instance of WebTestGeolocation_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestGeolocation_STATUS(subject WebTestGeolocation_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -650,7 +650,7 @@ func Test_WebTestProperties_Configuration_WhenPropertiesConverted_RoundTripsWith
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_Configuration tests if a specific instance of WebTestProperties_Configuration can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_Configuration tests if a specific instance of WebTestProperties_Configuration can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_Configuration(subject WebTestProperties_Configuration) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -753,7 +753,7 @@ func Test_WebTestProperties_Configuration_STATUS_WhenPropertiesConverted_RoundTr
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_Configuration_STATUS tests if a specific instance of WebTestProperties_Configuration_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_Configuration_STATUS tests if a specific instance of WebTestProperties_Configuration_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_Configuration_STATUS(subject WebTestProperties_Configuration_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -856,7 +856,7 @@ func Test_WebTestProperties_Request_WhenPropertiesConverted_RoundTripsWithoutLos
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_Request tests if a specific instance of WebTestProperties_Request can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_Request tests if a specific instance of WebTestProperties_Request can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_Request(subject WebTestProperties_Request) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -977,7 +977,7 @@ func Test_WebTestProperties_Request_STATUS_WhenPropertiesConverted_RoundTripsWit
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_Request_STATUS tests if a specific instance of WebTestProperties_Request_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_Request_STATUS tests if a specific instance of WebTestProperties_Request_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_Request_STATUS(subject WebTestProperties_Request_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -1098,7 +1098,7 @@ func Test_WebTestProperties_ValidationRules_WhenPropertiesConverted_RoundTripsWi
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_ValidationRules tests if a specific instance of WebTestProperties_ValidationRules can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_ValidationRules tests if a specific instance of WebTestProperties_ValidationRules can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_ValidationRules(subject WebTestProperties_ValidationRules) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -1218,7 +1218,7 @@ func Test_WebTestProperties_ValidationRules_STATUS_WhenPropertiesConverted_Round
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_ValidationRules_STATUS tests if a specific instance of WebTestProperties_ValidationRules_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_ValidationRules_STATUS tests if a specific instance of WebTestProperties_ValidationRules_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_ValidationRules_STATUS(subject WebTestProperties_ValidationRules_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -1338,7 +1338,7 @@ func Test_HeaderField_WhenPropertiesConverted_RoundTripsWithoutLoss(t *testing.T
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForHeaderField tests if a specific instance of HeaderField can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForHeaderField tests if a specific instance of HeaderField can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForHeaderField(subject HeaderField) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -1441,7 +1441,7 @@ func Test_HeaderField_STATUS_WhenPropertiesConverted_RoundTripsWithoutLoss(t *te
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForHeaderField_STATUS tests if a specific instance of HeaderField_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForHeaderField_STATUS tests if a specific instance of HeaderField_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForHeaderField_STATUS(subject HeaderField_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -1544,7 +1544,7 @@ func Test_WebTestProperties_ValidationRules_ContentValidation_WhenPropertiesConv
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_ValidationRules_ContentValidation tests if a specific instance of WebTestProperties_ValidationRules_ContentValidation can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_ValidationRules_ContentValidation tests if a specific instance of WebTestProperties_ValidationRules_ContentValidation can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_ValidationRules_ContentValidation(subject WebTestProperties_ValidationRules_ContentValidation) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -1649,7 +1649,7 @@ func Test_WebTestProperties_ValidationRules_ContentValidation_STATUS_WhenPropert
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWebTestProperties_ValidationRules_ContentValidation_STATUS tests if a specific instance of WebTestProperties_ValidationRules_ContentValidation_STATUS can be assigned to v1beta20180501previewstorage and back losslessly
+// RunPropertyAssignmentTestForWebTestProperties_ValidationRules_ContentValidation_STATUS tests if a specific instance of WebTestProperties_ValidationRules_ContentValidation_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWebTestProperties_ValidationRules_ContentValidation_STATUS(subject WebTestProperties_ValidationRules_ContentValidation_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()

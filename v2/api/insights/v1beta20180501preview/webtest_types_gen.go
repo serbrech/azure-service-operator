@@ -5,7 +5,7 @@ package v1beta20180501preview
 
 import (
 	"fmt"
-	v1beta20180501ps "github.com/Azure/azure-service-operator/v2/api/insights/v1beta20180501previewstorage"
+	v1beta20180501ps "github.com/Azure/azure-service-operator/v2/api/insights/v1beta20180501preview/storage"
 	"github.com/Azure/azure-service-operator/v2/internal/reflecthelpers"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime"
 	"github.com/Azure/azure-service-operator/v2/pkg/genruntime/conditions"
