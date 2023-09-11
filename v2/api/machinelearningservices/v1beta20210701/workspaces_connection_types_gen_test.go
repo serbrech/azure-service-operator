@@ -5,8 +5,8 @@ package v1beta20210701
 
 import (
 	"encoding/json"
-	v20210701s "github.com/Azure/azure-service-operator/v2/api/machinelearningservices/v1api20210701storage"
-	v1beta20210701s "github.com/Azure/azure-service-operator/v2/api/machinelearningservices/v1beta20210701storage"
+	v20210701s "github.com/Azure/azure-service-operator/v2/api/machinelearningservices/v1api20210701/storage"
+	v1beta20210701s "github.com/Azure/azure-service-operator/v2/api/machinelearningservices/v1beta20210701/storage"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/kr/pretty"
@@ -73,7 +73,7 @@ func Test_WorkspacesConnection_WhenPropertiesConverted_RoundTripsWithoutLoss(t *
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWorkspacesConnection tests if a specific instance of WorkspacesConnection can be assigned to v1beta20210701storage and back losslessly
+// RunPropertyAssignmentTestForWorkspacesConnection tests if a specific instance of WorkspacesConnection can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWorkspacesConnection(subject WorkspacesConnection) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -177,7 +177,7 @@ func Test_Workspaces_Connection_Spec_WhenPropertiesConverted_RoundTripsWithoutLo
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWorkspaces_Connection_Spec tests if a specific instance of Workspaces_Connection_Spec can be assigned to v1beta20210701storage and back losslessly
+// RunPropertyAssignmentTestForWorkspaces_Connection_Spec tests if a specific instance of Workspaces_Connection_Spec can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWorkspaces_Connection_Spec(subject Workspaces_Connection_Spec) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
@@ -285,7 +285,7 @@ func Test_Workspaces_Connection_STATUS_WhenPropertiesConverted_RoundTripsWithout
 	properties.TestingRun(t, gopter.NewFormatedReporter(false, 240, os.Stdout))
 }
 
-// RunPropertyAssignmentTestForWorkspaces_Connection_STATUS tests if a specific instance of Workspaces_Connection_STATUS can be assigned to v1beta20210701storage and back losslessly
+// RunPropertyAssignmentTestForWorkspaces_Connection_STATUS tests if a specific instance of Workspaces_Connection_STATUS can be assigned to storage and back losslessly
 func RunPropertyAssignmentTestForWorkspaces_Connection_STATUS(subject Workspaces_Connection_STATUS) string {
 	// Copy subject to make sure assignment doesn't modify it
 	copied := subject.DeepCopy()
